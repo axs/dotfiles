@@ -1,26 +1,36 @@
 [color]
  ui = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+ current = yellow reverse
+ local = yellow
+ remote = green
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
+ meta = yellow bold
+ frag = magenta bold
+ old = red bold
+ new = green bold
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+ added = yellow
+ changed = green
+ untracked = cyan
 
 [alias]
-    st = status
-    ci = commit
-    br = branch
-    co = checkout
-    df = diff
-    lg = log -p
-    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+ st = status
+ ci = commit
+ br = branch
+ co = checkout
+ df = diff
+ lg = log -p -w
+ ls = log --stat
+ tree = log --graph --decorate --pretty=oneline --abbrev-commit
+ sqsh = !sh -c 'git rebase -i HEAD~"$1"' -
+ wip = !"git add -A; git ls-files --deleted -z | xargs -0 git rm; git commit -m \"WIP\""
+ unwip = !"git log -n 1 | grep -q -c WIP && git reset HEAD~1"
+ diverges = !sh -c 'git rev-list --boundary $1...$2 | grep ^- | cut -c2-'
+
 [core]
-    excludesfile = /Users/axs/.gitignore
+       excludesfile = /home/axs/.gitignore
+[user]
+       name = axs
+       email = axs@email.com
+

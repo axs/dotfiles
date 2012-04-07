@@ -1,4 +1,3 @@
-
 # bind-key C-a last-window
 
 setw -g mode-keys vi
@@ -20,6 +19,8 @@ bind  Right next-window
 unbind % # Remove default binding since re replacing
 bind \ split-window -h
 bind - split-window -v
+bind [ swap-pane -U
+bind ] swap-pane -D
 
 set -g status-bg black
 set -g status-fg white
