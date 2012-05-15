@@ -37,7 +37,7 @@
 (global-set-key [f3] 'kill-buffer)
 (setq diff-switches "-u -b")
 (global-set-key [f4] 'diff)
-(global-set-key [f5] 'find-tag)
+(global-set-key [f5] 'ediff-buffers)
 (global-set-key [f6] 'query-replace)
 (global-set-key [f7] 'find-file)
 (global-set-key [f8] 'switch-to-buffer)
