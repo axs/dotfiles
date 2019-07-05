@@ -19,8 +19,8 @@ bind  Right next-window
 unbind % # Remove default binding since re replacing
 bind \ split-window -h
 bind - split-window -v
-Bind [ select-pane -L
-Bind ] select-pane -R
+bind [ select-pane -L
+bind ] select-pane -R
 
 
 set -g status-bg black
