@@ -28,3 +28,6 @@ set -g status-fg white
 set -g status-left '#[fg=green]#H'
 set-window-option -g window-status-current-bg red
 set -g status-right '#[fg=yellow]#(uptime | cut -d "," -f 2-)'
+
+# balanced rows ctrl-b,  alt-2
+# balanced column ctrl-b,  alt-1
