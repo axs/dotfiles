@@ -1,4 +1,9 @@
 # bind-key C-a last-window
+setw -g mode-mouse on
+set -g mouse-select-pane on
+set -g mouse-resize-pane on
+set -g mouse-select-window on
+setw -g alternate-screen on
 
 setw -g mode-keys vi
 bind-key -t vi-copy 'v' begin-selection
